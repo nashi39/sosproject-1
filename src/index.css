@@ -27,7 +27,7 @@
 body {
   margin: 0;
   overflow-x: hidden;
-  background-color: var(--bg-dark);
+  background-color: transparent;
 }
 
 .background-video {
@@ -37,8 +37,15 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: -2;
   opacity: 0.6;
+  background-color: var(--bg-dark);
+  /* フォールバック用 */
+}
+
+/* 背景色を確保するためのオーバーレイ（動画が読み込まれる前や動画の下） */
+:root {
+  background-color: var(--bg-dark);
 }
 
 .content {
