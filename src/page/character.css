@@ -1,5 +1,5 @@
 .character-page {
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 100px 20px;
     display: flex;
     flex-direction: column;
@@ -26,11 +26,12 @@
 
 .carousel-container {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1800px;
     position: relative;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
+    padding: 0 40px;
 }
 
 .nav-button {
@@ -59,14 +60,14 @@
 .character-section {
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 50px;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 60px;
     align-items: center;
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    padding: 50px;
-    border-radius: 30px;
+    padding: 60px;
+    border-radius: 40px;
     border: 1px solid var(--glass-border);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
@@ -98,15 +99,15 @@
 }
 
 .character-name-detail {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
     margin: 0;
     color: #fff;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .character-role-detail {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--accent-color);
     letter-spacing: 0.1rem;
@@ -114,10 +115,10 @@
 }
 
 .character-description {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.8);
-    margin: 10px 0;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 15px 0;
 }
 
 .carousel-indicators {
