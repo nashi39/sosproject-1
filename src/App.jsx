@@ -3,6 +3,7 @@ import './App.css'
 import HamburgerMenu from './components/HamburgerMenu';
 import CharacterPage from './page/character';
 import StoryPage from './page/story';
+import EventPage from './page/event';
 import { useState } from 'react';
 
 
@@ -38,6 +39,9 @@ function App() {
         )}
         {currentPage === 'story' && (
           <StoryPage />
+        )}
+        {currentPage === 'event' && (
+          <EventPage />
         )}
       </div>
 
