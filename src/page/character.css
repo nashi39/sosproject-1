@@ -1,5 +1,5 @@
 .character-page {
-    min-height: 90vh;
+    min-height: 100vh;
     padding: 100px 20px;
     display: flex;
     flex-direction: column;
@@ -25,12 +25,12 @@
 }
 
 .carousel-container {
-    width: 100%;
+    width: 85%;
     max-width: 1800px;
     position: relative;
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 50px;
     padding: 0 40px;
 }
 
