@@ -82,14 +82,6 @@ const characters = [
 const CharacterPage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % characters.length);
-    };
-
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + characters.length) % characters.length);
-    };
-
     const currentCharacter = characters[currentIndex];
 
     return (
@@ -98,16 +90,23 @@ const CharacterPage = () => {
             <p className="page-subtitle">登場人物紹介</p>
 
             <div className="carousel-container">
-                {/* 左ボタン */}
-                <button className="nav-button prev-button" onClick={handlePrev}>
-                    &lt;
-                </button>
+                {/* サムネイルリスト */}
+                <div className="character-thumbnails">
+                    {characters.map((char, index) => (
+                        <div
+                            key={char.id}
+                            className={`thumbnail-item ${index === currentIndex ? 'active' : ''}`}
+                            onClick={() => setCurrentIndex(index)}
+                        >
+                            <img src={char.image} alt={char.name} className="thumbnail-image" />
+                        </div>
+                    ))}
+                </div>
 
                 {/* キャラクター表示エリア */}
                 <div className="character-section active">
                     <div className="character-image-container">
                         <img
-
                             src={currentCharacter.image}
                             alt={currentCharacter.name}
                             className="character-image-detail"
@@ -132,11 +131,6 @@ const CharacterPage = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* 右ボタン */}
-                <button className="nav-button next-button" onClick={handleNext}>
-                    &gt;
-                </button>
             </div>
         </div>
     );
