@@ -98,6 +98,15 @@
     gap: 20px;
 }
 
+.character-cv-detail {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: #f0ff22;
+    line-height: 1.1;
+    text-align: left;
+}
+
 .character-name-detail {
     font-size: 3.5rem;
     font-weight: 800;
