@@ -41,6 +41,16 @@ const OnAirPage = () => {
             <h1 className="page-title">ON AIR</h1>
             <p className="page-subtitle">放送エピソード一覧</p>
 
+            <div className="page-intro-container fade-up">
+                <div className="page-intro-title-image">
+                    <img src="/material/onair/Title/1.png" alt="涼宮ハルヒの憂鬱" />
+                </div>
+                <div className="page-intro-synopsis">
+                    <p>エキセントリックな女子高生・涼宮ハルヒが結成した謎の部活動「SOS団（世界を大いに盛り上げるための涼宮ハルヒの団）」。</p>
+                    <p>彼女に巻き込まれたキョンと、実は宇宙人・未来人・超能力者である団員たちが繰り広げる、非日常系学園ストーリー。</p>
+                </div>
+            </div>
+
             <div className="top-thumbnail-nav">
                 <div className="thumbnail-track">
                     {episodes.map((ep) => (
