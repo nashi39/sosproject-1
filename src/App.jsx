@@ -4,7 +4,7 @@ import HamburgerMenu from './components/HamburgerMenu';
 import CharacterPage from './page/character';
 import StoryPage from './page/story';
 import EventPage from './page/event';
-import OnAirPage from './page/onair';
+import OnAirPage from './page/onair/onair';
 import { useState } from 'react';
 
 

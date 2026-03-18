@@ -24,14 +24,17 @@
 .top-thumbnail-nav::-webkit-scrollbar {
     height: 6px;
 }
+
 .top-thumbnail-nav::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 4px;
 }
+
 .top-thumbnail-nav::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 4px;
 }
+
 .top-thumbnail-nav::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.6);
 }
@@ -138,23 +141,57 @@
     text-align: center;
 }
 
-.episode-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 1.2rem;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    letter-spacing: 0.1em;
+.episode-title-frame {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
 }
 
-.episode-title::after {
+.episode-title-frame::before {
     content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: #ffd700;
-    margin: 10px auto 0;
-    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 215, 0, 0.1),
+            transparent);
+    transition: 0.5s;
+}
+
+.episode-detail-container:hover .episode-title-frame::before {
+    left: 150%;
+    transition: 1s;
+}
+
+.episode-number {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffd700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-right: 1.5rem;
+    border-right: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.episode-subtitle {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.05em;
 }
 
 .episode-synopsis {
@@ -180,8 +217,13 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeUp {
@@ -189,6 +231,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -201,14 +244,26 @@
         width: 120px;
         height: 70px;
     }
-    .episode-detail-container {
-        padding: 1.5rem;
+
+    .episode-title-frame {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.8rem 1.2rem;
+        border-radius: 16px;
     }
-    .episode-title {
-        font-size: 1.8rem;
+
+    .episode-number {
+        border-right: none;
+        padding-right: 0;
+        font-size: 1rem;
     }
+
+    .episode-subtitle {
+        font-size: 1.4rem;
+    }
+
     .episode-synopsis {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         line-height: 1.6;
     }
 }
