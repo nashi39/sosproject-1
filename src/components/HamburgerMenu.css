@@ -1,9 +1,9 @@
 .hamburger-container {
-    z-index: 1000;
+    z-index: 2000;
 }
 
 .hamburger-icon {
-    position: fixed;
+    position: absolute;
     top: 30px;
     right: 30px;
     width: 35px;
@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    z-index: 1002;
+    z-index: 2002;
     transition: transform 0.3s ease;
 }
 
@@ -56,7 +56,7 @@
     -webkit-backdrop-filter: blur(20px);
     border-left: 1px solid var(--glass-border);
     transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-    z-index: 1001;
+    z-index: 2001;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +117,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 2000;
     background: rgba(0, 0, 0, 0.4);
     opacity: 0;
     visibility: hidden;

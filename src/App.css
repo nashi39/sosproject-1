@@ -27,6 +27,31 @@
   padding: 2em;
 }
 
+
 .read-the-docs {
   color: #888;
+}
+
+.top-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2000;
+  cursor: pointer;
+  width: 100px;
+  /* You can adjust this size as needed */
+  transition: transform 0.3s ease;
+}
+
+.top-button:hover {
+  transform: scale(1.1);
+}
+
+.top-button img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* Optional: adds a slight rounding to the corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  /* Optional: adds depth */
 }

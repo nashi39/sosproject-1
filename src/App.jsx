@@ -27,6 +27,11 @@ function App() {
         playsInline
       />
 
+
+      <div className="top-button" onClick={() => handleNavigate('home')}>
+        <img src="/material/logo/TopButton.png" alt="Home" />
+      </div>
+
       <HamburgerMenu onNavigate={handleNavigate} />
 
       <div className="content">
