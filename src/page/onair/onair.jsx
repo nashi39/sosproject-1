@@ -33,18 +33,44 @@ const episodes = [
     { id: 28, title: '第28話', subtitle: 'サムデイ イン ザ レイン', synopsis: '秋のごたごたがようやく納まったかと思えば、季節はすでに12月。｢今年ってもう終わりなのか!｣と人並みに驚きたいところだが、しかしまぁ、半年以上アイツと付き合わせられれば、非日常的な出来事も、普通に受け入れられるようになっていた…。慣れとは恐ろしいものだ…。で,今回の団長命令とやらは、ハルヒによって自主制作映画のスポンサーに仕立て上げられた商店街の電気屋から、ストーブを譲り受けて来るというものだ。ハルヒにしてはまともな用件なのが気にはなるが、部室にいても寒いので、俺は行くことにした。…にしても、…オレがいない間、アイツはいったい何をしているんだ?', image: '/material/onair/MainStory/28.jpg' }
 ];
 
+// タイトル画像のデータ
+const titleImages = [
+    { id: 1, path: '/material/onair/Title/1.png' },
+    { id: 2, path: '/material/onair/Title/2.png' },
+    { id: 3, path: '/material/onair/Title/3.png' },
+    { id: 4, path: '/material/onair/Title/4.png' },
+    { id: 5, path: '/material/onair/Title/5.png' },
+];
+
+
 const OnAirPage = () => {
     const [selectedEpisode, setSelectedEpisode] = useState(episodes[0]);
+    const [selectedTitle, setSelectedTitle] = useState(titleImages[0].path);
 
     return (
         <div className="onair-page fade-in">
+            <aside className="title-sidebar fade-in-left">
+                <div className="title-button-track">
+                    {titleImages.map((title) => (
+                        <button
+                            key={title.id}
+                            className={`title-button ${selectedTitle === title.path ? 'active' : ''}`}
+                            onClick={() => setSelectedTitle(title.path)}
+                        >
+                            <img src={title.path} alt={`Title ${title.id}`} />
+                        </button>
+                    ))}
+                </div>
+            </aside>
+
             <h1 className="page-title">ON AIR</h1>
             <p className="page-subtitle">放送エピソード一覧</p>
 
             <div className="page-intro-container fade-up">
                 <div className="page-intro-title-image">
-                    <img src="/material/onair/Title/1.png" alt="涼宮ハルヒの憂鬱" />
+                    <img src={selectedTitle} alt="涼宮ハルヒの憂鬱" className="selected-title-logo" />
                 </div>
+
                 <div className="page-intro-synopsis">
                     <p>エキセントリックな女子高生・涼宮ハルヒが結成した謎の部活動「SOS団（世界を大いに盛り上げるための涼宮ハルヒの団）」。</p>
                     <p>彼女に巻き込まれたキョンと、実は宇宙人・未来人・超能力者である団員たちが繰り広げる、非日常系学園ストーリー。</p>
