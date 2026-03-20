@@ -14,8 +14,15 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .title-sidebar {
@@ -268,9 +275,9 @@
 .episode-large-image {
     width: 100%;
     height: auto;
+    max-height: 85vh;
     display: block;
-    aspect-ratio: 16/9;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .episode-info {
