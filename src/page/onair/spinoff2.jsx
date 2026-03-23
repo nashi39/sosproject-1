@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const episodes = [
-    { id: 1, title: 'Episode 1-13', subtitle: 'にょろーん ちゅるやさん', synopsis: 'スモークチーズが大好きな「ちゅるやさん」が繰り広げる、不思議な脱力系ショートアニメ。', image: '/material/onair/Spinoff2/1_13.jpg' }
+    { id: 1, title: 'Episode 1-13', subtitle: 'さっきもう食べたでしょ　ほか', synopsis: 'そのいちっ さっきもう食べたでしょ／そのにっ じゃんけんするわよ／そのさんっ 不思議な生き物ねー／そのよんっ 私もマナーモード機能が…／そのごっ めがっさ似合ってると思わないっかなー／そのろくっ 短冊をつるすわよ／そのななっ なんでよけたん／そのはちっ お弁当にする?それとも私? ／そのきゅうっ しょうがない子だ…／そのじゅうっ いもをやくわよ! ／そのじゅういちっ あ、名前ちゃんと書いてた／そのじゅうにっ すまんが人間の言葉は分からんのだわ／そのじゅうさんっ 『そり』ってたのしいねっ', image: '/material/onair/Spinoff2/1_13.jpg' }
 ];
 
 const Spinoff2 = () => {
@@ -11,8 +11,7 @@ const Spinoff2 = () => {
         <div className="title-content-animation">
             <div className="page-intro-container fade-up">
                 <div className="page-intro-synopsis">
-                    <p>『涼宮ハルヒの憂鬱』のキャラクター（鶴屋さん）をモデルにした4コマ漫画を原作とするショートアニメ。</p>
-                    <p>シュールな世界観と独特のテンポが魅力の作品。</p>
+                    <p>スモークチーズ大好きなちっちゃな女の子｢ちゅるやさん｣がにょろーんな感じでSOS団メンバーと繰り広げるシュールな日常芝居</p>
                 </div>
             </div>
 
@@ -27,7 +26,6 @@ const Spinoff2 = () => {
                             <div className="thumbnail-item">
                                 <img src={ep.image} alt={ep.subtitle} />
                             </div>
-                            <div className="thumbnail-label">{ep.id}</div>
                         </div>
                     ))}
                 </div>

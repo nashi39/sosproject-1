@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const episodes = [
-    { id: 1, title: '劇場版', subtitle: '涼宮ハルヒの消失', synopsis: 'クリスマスも間近に控えたある日、学校へ行くとハルヒがいない。それどころか、後ろの席には死んだはずの朝倉が座っていた。世界が改変され、誰もハルヒを知らない状況に困惑するキョン。唯一の手掛かりは、有希が残したメッセージだった。', image: '/material/onair/movie/animeMovie.jpg' }
+    { id: 1, title: '劇場版', subtitle: '涼宮ハルヒの消失', synopsis: 'クリスマスが間近に迫ったある冬の日。学校に向かったキョンはいつもの日常と違うことに気づく。後ろの席にいるはずのハルヒがいない……。さらに驚くべき事に、その席に座っていたのは、(『憂鬱』にて)キョンを殺そうとして長門に消滅させられたはずの朝倉だった！', image: '/material/onair/movie/animeMovie.jpg' }
 ];
 
 const Movie = () => {
@@ -27,7 +27,7 @@ const Movie = () => {
                             <div className="thumbnail-item">
                                 <img src={ep.image} alt={ep.subtitle} />
                             </div>
-                            <div className="thumbnail-label">{ep.id}</div>
+
                         </div>
                     ))}
                 </div>
