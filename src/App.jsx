@@ -5,6 +5,7 @@ import CharacterPage from './page/character';
 import StoryPage from './page/story';
 import EventPage from './page/event';
 import OnAirPage from './page/onair/onair';
+import MusicPage from './page/music';
 import { useState } from 'react';
 
 
@@ -51,6 +52,9 @@ function App() {
         )}
         {currentPage === 'onair' && (
           <OnAirPage />
+        )}
+        {currentPage === 'music' && (
+          <MusicPage />
         )}
       </div>
 
