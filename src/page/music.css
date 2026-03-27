@@ -1,12 +1,14 @@
 .music-page {
-    min-height: 100vh;
+    height: 100vh;
+    /* 画面固定 */
     color: #ffffff;
     font-family: 'Inter', 'Outfit', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 50px 0; /* 上下に余白を持たせる */
+    overflow: hidden;
+    /* スクロールを解除 */
 }
 
 .music-page::before {
@@ -16,7 +18,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 30%, #1e2a4a 0%, #0f111a 70%);
     opacity: 0.6;
     z-index: 0;
 }
@@ -26,19 +27,22 @@
     z-index: 1;
     width: 100%;
     max-width: 1400px;
-    height: 1400px; /* 画像が収まるよう高さを十分に確保 */
+    height: 100%;
+    /* コンテナいっぱいに */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1rem;
+    justify-content: center;
+    padding-top: 0;
 }
 
 .page-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    /* 少し小さくして高さを稼ぐ */
     letter-spacing: 0.5rem;
-    margin-bottom: 5rem;
-    /* さらに関隔を広げて重なりを回避 */
-    background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+    margin-bottom: 2rem;
+    /* 余白を詰める */
+    background: linear-gradient(135deg, #f0d478 0%, #7dd4f7 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -48,13 +52,14 @@
 
 .carousel-wrapper {
     position: relative;
-    width: 1000px; /* 円の幅に合わせて広げる */
-    height: 1000px; /* 円の高さに合わせて広げる */
-    /* 円を大きくするために広げる */
+    width: 1300px;
+    height: 700px;
+    /* 高さを少し削る */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px; /* margin-topを調整してタイトルとのバランスを取る */
+    margin-top: 150px;
+    /* マージンを削除 */
 }
 
 .circular-carousel {
@@ -98,30 +103,76 @@
 
 .music-info-panel {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
-    transform: translate(-50%, -50%); /* 中心に配置 */
-    width: 450px; /* サイズを円の中に収まるよう調整 */
+    transform: translate(-50%, -50%);
+    /* 中心に配置 */
+    width: 700px;
+    /* ボタンのために少し広げる */
+    height: 500px;
     background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(20px);
-    border-radius: 50%; /* 円形にするのも面白いかもしれません */
-    aspect-ratio: 1 / 1; /* 正方形/円形に */
+    backdrop-filter: blur(25px);
+    border-radius: 200px;
+    display: flex;
+    justify-content: space-between;
+    /* ボタンを両端に */
+    align-items: center;
+    padding: 0 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-out;
+    z-index: 5;
+    /* ボタンを押しやすくするためzIndexを上げる */
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 60px rgba(0, 0, 0, 0.4);
-    animation: fadeIn 1s ease-out;
-    z-index: 0; /* 画像より後ろに配置 */
+    transition: all 0.3s ease;
+    color: #fff;
+    backdrop-filter: blur(5px);
+}
+
+.nav-btn:hover {
+    background: rgba(0, 229, 255, 0.2);
+    border-color: #00e5ff;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+}
+
+.nav-btn .arrow-icon {
+    width: 12px;
+    height: 12px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    display: block;
+}
+
+.nav-btn.prev .arrow-icon {
+    transform: rotate(-135deg);
+    margin-left: 5px;
+}
+
+.nav-btn.next .arrow-icon {
+    transform: rotate(45deg);
+    margin-right: 5px;
 }
 
 .info-content {
+    flex: 1;
     text-align: center;
+    padding: 0 1rem;
 }
 
 .song-title {
-    font-size: 1.8rem; /* 少し小さく */
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
     color: #fff;
     font-weight: 800;
@@ -129,7 +180,7 @@
 }
 
 .artist-name {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #00e5ff;
     margin-bottom: 0.5rem;
     font-weight: 500;
@@ -142,7 +193,7 @@
 }
 
 .description {
-    font-size: 0.9rem; /* 円の中に収まるよう小さく */
+    font-size: 1.3rem;
     line-height: 1.6;
     color: #ddd;
     font-weight: 300;
@@ -152,17 +203,10 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
-/* Hover effects */
-.music-item:not(.active):hover {
-    opacity: 0.9 !important;
-    transform: scale(0.9) !important;
-}
-
-.music-item:not(.active):hover .image-frame {
-    border-color: rgba(255, 255, 255, 0.5);
-}
+/* ユーザーの要望によりホバー時の挙動を削除 */
