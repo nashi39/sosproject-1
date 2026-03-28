@@ -77,6 +77,7 @@ const Music = () => {
     <div className="music-page">
       <div className="music-container">
         <h1 className="page-title">MUSIC INTRODUCTION</h1>
+        <p className="page-subtitle">楽曲紹介</p>
 
         <div className="carousel-wrapper">
           <div className="circular-carousel">

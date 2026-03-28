@@ -36,19 +36,36 @@
     padding-top: 0;
 }
 
-.page-title {
-    font-size: 2.5rem;
-    /* 少し小さくして高さを稼ぐ */
-    letter-spacing: 0.5rem;
-    margin-bottom: 2rem;
-    /* 余白を詰める */
-    background: linear-gradient(135deg, #f0d478 0%, #7dd4f7 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.music-page .page-title {
+    font-size: 4rem;
     font-weight: 800;
-    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+    letter-spacing: 0.5rem;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+    animation: fadeIn 0.8s ease-out;
 }
+
+.music-page .page-subtitle {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 60px;
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .carousel-wrapper {
     position: relative;
@@ -210,3 +227,31 @@
 }
 
 /* ユーザーの要望によりホバー時の挙動を削除 */
+
+@media (max-width: 1024px) {
+    .music-page .page-title {
+        font-size: 3rem;
+        letter-spacing: 0.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .music-page .page-title {
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+    .music-page .page-subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 30px;
+    }
+    .carousel-wrapper {
+        width: 100%;
+        margin-top: 100px;
+    }
+    .music-info-panel {
+        width: 90%;
+        height: auto;
+        padding: 2rem 1rem;
+        border-radius: 40px;
+    }
+}
