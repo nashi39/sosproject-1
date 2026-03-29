@@ -1,0 +1,236 @@
+:root {
+    --primary-color: #ffcc00;
+    /* Haruhi's signature yellow/gold */
+    --secondary-color: #ff6600;
+    /* Orange accent */
+    --bg-dark: #121212;
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.sns-page {
+    position: relative;
+    min-height: 100vh;
+    color: var(--text-primary);
+    font-family: 'Inter', 'Roboto', sans-serif;
+    overflow-x: hidden;
+    padding: 80px 20px;
+}
+
+.sns-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 204, 0, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.sns-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.sns-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #fff 50%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.page-subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    letter-spacing: 0.3em;
+    margin-bottom: 20px;
+}
+
+.header-line {
+    width: 100px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.link-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.link-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--card-shadow);
+    flex: 0 1 calc(50% - 20px);
+    max-width: 550px;
+    min-width: 300px;
+}
+
+.link-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px rgba(255, 204, 0, 0.15);
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.link-card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.link-card:hover .hover-overlay {
+    opacity: 1;
+}
+
+.visit-text {
+    color: #fff;
+    font-weight: 700;
+    border: 2px solid var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 30px;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.link-card:hover .visit-text {
+    transform: translateY(0);
+}
+
+.card-info {
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.link-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.link-card:hover .link-title {
+    color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.link-card {
+    animation: fadeIn 0.8s ease backwards;
+}
+
+.link-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.link-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.link-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.link-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.link-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .link-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .link-card {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .sns-page {
+        padding: 60px 15px;
+    }
+}

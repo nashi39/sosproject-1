@@ -5,8 +5,6 @@
   text-align: center;
 }
 
-
-
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -27,7 +25,6 @@
   padding: 2em;
 }
 
-
 .read-the-docs {
   color: #888;
 }
@@ -39,7 +36,6 @@
   z-index: 2000;
   cursor: pointer;
   width: 100px;
-  /* You can adjust this size as needed */
   transition: transform 0.3s ease;
 }
 
@@ -51,7 +47,40 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
-  /* Optional: adds a slight rounding to the corners */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  /* Optional: adds depth */
+}
+
+.footer-sns {
+  width: 100%;
+  padding: 60px 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clear: both;
+}
+
+.x-link {
+  display: block;
+  width: 100px; /* サイズを拡大 */
+  height: 100px; /* サイズを拡大 */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.x-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+}
+
+.x-link:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.x-link:hover img {
+  filter: drop-shadow(0 0 25px rgba(255, 204, 0, 0.8));
+}
+
+.content {
+  min-height: calc(100vh - 200px); /* フッターが最下部に来るように調整 */
 }

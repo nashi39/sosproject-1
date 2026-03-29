@@ -6,6 +6,7 @@ import StoryPage from './page/story';
 import EventPage from './page/event';
 import OnAirPage from './page/onair/onair';
 import MusicPage from './page/music';
+import SnsPage from './page/sns';
 import { useState } from 'react';
 
 
@@ -56,8 +57,16 @@ function App() {
         {currentPage === 'music' && (
           <MusicPage />
         )}
+        {currentPage === 'sns' && (
+          <SnsPage />
+        )}
       </div>
 
+      <footer className="footer-sns">
+        <a href="https://x.com/haruhi_official" target="_blank" rel="noopener noreferrer" className="x-link">
+          <img src="/material/logo/x.png" alt="X (Twitter)" />
+        </a>
+      </footer>
     </>
   )
 }

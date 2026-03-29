@@ -4,16 +4,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(0, 0, 0, 0.4);
 }
 
 .story-title {
     font-size: 6rem;
     font-weight: 800;
-    margin-bottom: 0;
-    letter-spacing: 0.5rem;
-    color: #fff;
-    text-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+    letter-spacing: 0.1em;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #fff 50%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
 }
 
 .story-subtitle {

@@ -13,6 +13,7 @@ const HamburgerMenu = ({ onNavigate }) => {
         { id: 4, label: 'EVENT', page: 'event' },
         { id: 5, label: 'ON AIR', page: 'onair' },
         { id: 6, label: 'MUSIC', page: 'music' },
+        { id: 7, label: 'SNS', page: 'sns' },
 
         // ここに新しい項目を追加するだけ
     ];
