@@ -17,7 +17,7 @@ const StoryPage = () => {
                 {/* セクション1：画像左、テキスト右 */}
                 <div className="story-section">
                     <div className="story-image">
-                        <img src="/material/storyPhoto/page2.jpg" alt="涼宮ハルヒ" />
+                        <img src="./material/storyPhoto/page2.jpg" alt="涼宮ハルヒ" />
                     </div>
                     <div className="story-text-box">
                         <p>
@@ -46,7 +46,7 @@ const StoryPage = () => {
                         </p>
                     </div>
                     <div className="story-image">
-                        <img src="/material/storyPhoto/page1.jpg" alt="SOS団" />
+                        <img src="./material/storyPhoto/page1.jpg" alt="SOS団" />
                     </div>
                 </div>
             </div>

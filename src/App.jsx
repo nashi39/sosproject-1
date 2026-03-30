@@ -22,7 +22,7 @@ function App() {
 
       <video
         className="background-video"
-        src="/material/backMovie/main.mp4"
+        src="./material/backMovie/main.mp4"
         autoPlay
         loop
         muted
@@ -31,7 +31,7 @@ function App() {
 
 
       <div className="top-button" onClick={() => handleNavigate('home')}>
-        <img src="/material/logo/TopButton.png" alt="Home" />
+        <img src="./material/logo/TopButton.png" alt="Home" />
       </div>
 
       <HamburgerMenu onNavigate={handleNavigate} />
@@ -39,7 +39,7 @@ function App() {
       <div className="content">
         {currentPage === 'home' && (
           <div className="logo">
-            <img src="/material/logo/soslogo.png" alt="" />
+            <img src="./material/logo/soslogo.png" alt="" />
           </div>
         )}
         {currentPage === 'character' && (
@@ -64,7 +64,7 @@ function App() {
 
       <footer className="footer-sns">
         <a href="https://x.com/haruhi_official" target="_blank" rel="noopener noreferrer" className="x-link">
-          <img src="/material/logo/x.png" alt="X (Twitter)" />
+          <img src="./material/logo/x.png" alt="X (Twitter)" />
         </a>
       </footer>
     </>

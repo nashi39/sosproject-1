@@ -7,49 +7,49 @@ const musicData = [
     title: 'ハレ晴レユカイ',
     artist: '涼宮ハルヒ、長門有希、朝比奈みくる',
     description: '『涼宮ハルヒの憂鬱』エンディングテーマ。社会現象を巻き起こしたダンスナンバーで、SOS団3人の息の合った歌唱が特徴。',
-    image: '/material/music/1.jpg'
+    image: './material/music/1.jpg'
   },
   {
     id: 2,
     title: '冒険でしょでしょ？',
     artist: '涼宮ハルヒ (CV. 平野綾)',
     description: '『涼宮ハルヒの憂鬱』オープニングテーマ。物語の始まりを予感させる、エネルギッシュでワクワクする楽曲。',
-    image: '/material/music/2.jpg'
+    image: './material/music/2.jpg'
   },
   {
     id: 3,
     title: 'Super Driver',
     artist: '涼宮ハルヒ (CV. 平野綾)',
     description: '2期オープニングテーマ。疾走感のあるロックナンバーで、ライブでも非常に盛り上がる人気曲です。',
-    image: '/material/music/3.jpg'
+    image: './material/music/3.jpg'
   },
   {
     id: 4,
     title: '止マレ！',
     artist: '涼宮ハルヒ (CV. 平野綾)',
     description: '2期エンディングテーマ。1期とは異なるテイストながら、高い人気を誇ります。',
-    image: '/material/music/4.jpg'
+    image: './material/music/4.jpg'
   },
   {
     id: 5,
     title: 'God knows...',
     artist: '涼宮ハルヒ (CV. 平野綾)',
     description: '『涼宮ハルヒの憂鬱』第12話「ライブアライブ」劇中歌。文化祭のステージで演奏された、疾走感あふれるロックナンバー。',
-    image: '/material/music/5.jpg'
+    image: './material/music/5.jpg'
   },
   {
     id: 6,
     title: '雪、無音、窓辺にて。',
     artist: '長門有希 (CV. 茅原実里)',
     description: '長門有希のキャラクターソング。静謐でいて奥深いメロディが、彼女のキャラクター性を完璧に表現している名曲。',
-    image: '/material/music/6.jpg'
+    image: './material/music/6.jpg'
   },
   {
     id: 7,
     title: '優しい忘却',
     artist: '長門有希 (CV. 茅原実里)',
     description: '映画『涼宮ハルヒの消失』の主題歌。茅原実里が歌う、作品の切ない読後感を象徴するバラードです。',
-    image: '/material/music/7.jpg'
+    image: './material/music/7.jpg'
   }
 ];
 

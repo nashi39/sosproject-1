@@ -8,11 +8,11 @@ import Spinoff3 from './spinoff3';
 
 // タイトル画像のデータ
 const titleImages = [
-    { id: 1, path: '/material/onair/Title/1.png', component: MainStory },
-    { id: 2, path: '/material/onair/Title/2.png', component: Movie },
-    { id: 3, path: '/material/onair/Title/3.png', component: Spinoff1 },
-    { id: 4, path: '/material/onair/Title/4.png', component: Spinoff2 },
-    { id: 5, path: '/material/onair/Title/5.png', component: Spinoff3 },
+    { id: 1, path: './material/onair/Title/1.png', component: MainStory },
+    { id: 2, path: './material/onair/Title/2.png', component: Movie },
+    { id: 3, path: './material/onair/Title/3.png', component: Spinoff1 },
+    { id: 4, path: './material/onair/Title/4.png', component: Spinoff2 },
+    { id: 5, path: './material/onair/Title/5.png', component: Spinoff3 },
 ];
 
 
